@@ -1,0 +1,12 @@
+body{
+    color: red;
+    text-shadow: 2px 2px 5px gray;
+    font-family: Impact;
+}
+
+ol{
+    background-color: palevioletred;
+    border: 1px dashed black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+}

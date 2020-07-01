@@ -1,0 +1,27 @@
+body{
+    color: blue;
+    font-family: Arial;
+}
+
+ol{
+    color: green;
+    font-family: Verdana;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#divExterna{
+    background-color: lightskyblue;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.interna{
+    background-color: lightcoral;
+    padding : 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}

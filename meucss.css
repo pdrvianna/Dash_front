@@ -1,0 +1,13 @@
+#titulo{
+    border-radius: 5px;
+    background-color: gray;
+    box-shadow: 1px 1px 5px black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#rodape{
+    background-color: darkolivegreen;
+    color: beige;
+}

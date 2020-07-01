@@ -1,0 +1,39 @@
+#resposta{
+    color: rgb(90, 85, 85);
+    font-size: 14px;
+}
+
+#titulo{
+    color: rgb(11, 11, 66);
+    font-family: Verdana;
+    border: 2px solid gray;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#info{
+    color: rgb(59, 56, 56);
+}
+
+.equipe{
+    color: rgb(38, 36, 36);
+    position: relative; top: 20px; left: 110px;
+}
+
+.inputs{
+    max-width: 360px;
+    padding: 4% 0 0;
+    margin: auto;
+  }
+
+  .form {
+    position: relative;
+    z-index: 1;
+    background: #f88a41;
+    max-width: 360px;
+    margin: 0 auto 1px;
+    margin-bottom: 0px;
+    padding: 20px;
+    padding-bottom: 1px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
