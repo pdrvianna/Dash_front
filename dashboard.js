@@ -23,11 +23,17 @@ function preencheChart({ statusOk, statusFalha, statusFraude, nome }) {
             datasets: [{
                 data: [statusOk, statusFalha, statusFraude],
                 backgroundColor: ["#32CD32", "#F7464A", "#F7A64A"],
-                hoverBackgroundColor: ["#5AD3D1", "#FF5A5E", "#F7C64A"]
+                hoverBackgroundColor: ["#2AB91E", "#FF5A5E", "#F7C64A"],
             }],
         },
         options: {
-            responsive: true
+            responsive: true,
+            legend: {
+                position: 'bottom',
+                labels: {
+                    boxWidth: 20,
+                },
+            },
         },
     };
     if (!chart) {
