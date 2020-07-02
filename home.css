@@ -11,6 +11,19 @@
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
+.top10 td, .top10 th {
+    border: 1px solid black;
+}
+
+.top10 .vol {
+    text-align: center;
+}
+
+.top10 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #titulo {
     color: rgb(66, 46, 11);
     font-family: Verdana;
@@ -46,7 +59,6 @@
 
 .carousel, .carousel-item, .carousel-inner {
     height: 300;
-    /* overflow-y: visible; */
 }
 
 .dropdown-menu {

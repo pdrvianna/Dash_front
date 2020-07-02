@@ -2,7 +2,7 @@ var templateBarra = `<img src="**FOTO**" width="35px">
                        Bem vindo **NOME**
                        (<a href="departamento.html?id=**IDDEP**">**DEPARTAMENTO**</a>)`;
 
-var templateTabela = `<table>
+var templateTabela = `<table class= "top10">
                        <thead>
                            <tr>
                                <th>Parceiro</th>
@@ -11,48 +11,37 @@ var templateTabela = `<table>
                        </thead>
                        <tbody>
                             <tr>
-                               <td>Par1</td><td>VolTrans1</td>
+                               <td>Par1</td><td class="vol">VolTrans1</td>
                             </tr>
                             <tr>
-                                <td>Par2</td><td>VolTrans2</td>
+                                <td>Par2</td><td class="vol">VolTrans2</td>
                             </tr>
                             <tr>
-                                <td>Par3</td><td>VolTrans3</td>
+                                <td>Par3</td><td class="vol">VolTrans3</td>
                             </tr>
                             <tr>
-                                 <td>Par4</td><td>VolTrans4</td>
+                                 <td>Par4</td><td class="vol">VolTrans4</td>
                             </tr>
                             <tr>
-                                <td>Par5</td><td>VolTrans5</td>
+                                <td>Par5</td><td class="vol">VolTrans5</td>
                             </tr>
                             <tr>
-                                <td>Par6</td><td>VolTrans6</td>
+                                <td>Par6</td><td class="vol">VolTrans6</td>
                             </tr>
                             <tr>
-                                <td>Par7</td><td>VolTrans7</td>
+                                <td>Par7</td><td class="vol">VolTrans7</td>
                             </tr>
                             <tr>
-                                <td>Par8</td><td>VolTrans8</td>
+                                <td>Par8</td><td class="vol">VolTrans8</td>
                             </tr>
                             <tr>
-                                <td>Par9</td><td>VolTrans9</td>
+                                <td>Par9</td><td class="vol">VolTrans9</td>
                             </tr>
                             <tr>
-                                <td>Par10</td><td>VolTrans10</td>
+                                <td>Par10</td><td class="vol">VolTrans10</td>
                             </tr>
                        </tbody>
                    </table> `;
-
-var templateBox = `<option value="**L1**">**L1**</option>
-    <option value="L2">L2</option>
-    <option value="L3">L3</option>
-    <option value="L4">L4</option>
-    <option value="L5">L5</option>
-    <option value="L6">L6</option>
-    <option value="L7">L7</option>
-    <option value="L8">L8</option>
-    <option value="L9">L9</option>
-    <option value="L10">L10</option>`;
 
 function logout() {
     localStorage.removeItem("userDash");
