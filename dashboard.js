@@ -24,11 +24,11 @@ function preencheChart({ statusOk, statusFalha, statusFraude, nome }) {
                 data: [statusOk, statusFalha, statusFraude],
                 backgroundColor: ["#32CD32", "#F7464A", "#F7A64A"],
                 hoverBackgroundColor: ["#5AD3D1", "#FF5A5E", "#F7C64A"]
-            }]
+            }],
         },
         options: {
             responsive: true
-        }
+        },
     };
     if (!chart) {
         chart = new Chart(ctxP, chartData);
