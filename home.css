@@ -42,23 +42,35 @@
 
 .carousel {
     background-color: #F2F2F2;
+}
+
+.carousel, .carousel-item, .carousel-inner {
     height: 300;
+    /* overflow-y: visible; */
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-image: none;
-  font-size: 50px;
-  position: absolute;
-  bottom: 50px;
-  color: black;
+.dropdown-menu {
+    overflow-y: scroll;
+    height: 200;
 }
 
-.carousel-control-next-icon:after
-{
-  content: '>';
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-image: none;
+    font-size: 50px;
+    position: absolute;
+    bottom: 50px;
+    color: black;
+}
+
+.carousel-control-next-icon:after {
+    content: '>';
 }
 
 .carousel-control-prev-icon:after {
-  content: '<';
+    content: '<';
+}
+
+#chart {
+    position: relative;
+    top: 20px;
 }
