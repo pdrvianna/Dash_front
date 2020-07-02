@@ -13,15 +13,12 @@ var templateUSR = `<div class="row rowuser">
                             Unidade: **UNIDADE** <br>
                             Andar: **ANDAR**
                         </div>
-
                    </div>`;
-
-
 
 function carregaUsers() {
     fetch("http://localhost:8080/usuarios")
         .then(res => res.json())
-        .then(res => preenche(res))
+        .then(res => preenche(res));
 }
 
 function preenche(resJson) {
@@ -29,7 +26,6 @@ function preenche(resJson) {
     var contSTR = "";
     for (i = 0; i < resJson.length; i++) {
         var user = resJson[i];
- 
             var novaLinha = templateUSR.replace("**NOME**", user.nome)
                 .replace("**LINKFOTO**", user.linkFoto)
                 .replace("**RACF**", user.racf)
