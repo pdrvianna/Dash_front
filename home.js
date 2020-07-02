@@ -86,11 +86,12 @@ function carregaAgentes() {
         });
 }
 
-function preencheTbl(resJson) {
+function preencheTbl(parceiros) {
+    parceiros = parceiros.sort((a, b) =>  b.volume - a.volume);
     var novalinha = templateTabela;
     var box = "<option value=vazio></option>";
-    for (i = 0; i < resJson.length; i++) {
-        var agente = resJson[i];
+    for (i = 0; i < parceiros.length && i < 10; i++) {
+        var agente = parceiros[i];
         i = i + 1;
         var box = box + "<option value=L" + i + ">" + agente.nome + "</option>";
         var novalinha = novalinha.replace("Par" + i, agente.nome).replace("VolTrans" + i, +agente.volume);
