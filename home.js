@@ -81,10 +81,13 @@ function verificaUsuario() {
 function carregaAgentes() {
     fetch("http://localhost:8080/agentesfinanceiros")
         .then(res => res.json())
-        .then(res => preenchetbl(res));
+        .then(res => {
+            preencheTbl(res);
+            preencheDropdown(res);
+        });
 }
 
-function preenchetbl(resJson) {
+function preencheTbl(resJson) {
     var novalinha = templateTabela;
     var box = "<option value=vazio></option>";
     for (i = 0; i < resJson.length; i++) {

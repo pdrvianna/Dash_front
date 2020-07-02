@@ -1,19 +1,10 @@
-
-const ddlParceiros = document.getElementById("ddlParceiros");
 let chart;
 
-function povoaDropdownParceiros() {
-    if (ddlParceiros.innerHTML == "") {
-        fetch("http://localhost:8080/agentesfinanceiros/")
-            .then(res => res.json())
-            .then(parceiros => {
-                parceiros.forEach(parceiro => addParceiroToDropdown(parceiro));
-            });
-    }
-}
-
-function addParceiroToDropdown(parceiro) {
-    ddlParceiros.innerHTML += `<a class="dropdown-item" href="#" onclick="exibeDashParceiro(${parceiro.id})">${parceiro.nome}</a>`;
+function preencheDropdown(parceiros) {
+    const ddlParceiros = document.getElementById("ddlParceiros");
+    parceiros.forEach(parceiro => {
+        ddlParceiros.innerHTML += `<a class="dropdown-item" href="#" onclick="exibeDashParceiro(${parceiro.id})">${parceiro.nome}</a>`;
+    });
 }
 
 function exibeDashParceiro(id) {
@@ -42,7 +33,6 @@ function preencheChart({ statusOk, statusFalha, statusFraude, nome }) {
     if (!chart) {
         chart = new Chart(ctxP, chartData);
     } else {
-        chart.options.title.text = nome;
         chart.data.datasets[0].data = [statusOk, statusFalha, statusFraude];
         chart.update();
     }
