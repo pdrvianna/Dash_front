@@ -24,30 +24,43 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12" id="barraUser">
+            <div class="col-md-12" id="barraUser"></div>
+        </div>
+    </div>
 
+    <div id="carouselExampleIndicators" class="carousel slide form" data-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Top10 -->
+            <div class="carousel-item active col-md-12 text-center" id="tbl"></div>
+            <div class="carousel-item dropdown col-md-12 text-center">
+                <!-- Dashboard -->
+                <div>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        onclick="povoaDropdownParceiros()">
+                        Selecione o parceiro
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="ddlParceiros"></div>
+                </div>
+                <br>
+                <div>
+                    <canvas id="chart"></canvas>
+                </div>
+                <script type="text/javascript" src="dashboard.js"></script>
+                <!-- /Dashboard -->
             </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <div class="form">
-        <div class="tabela">
-            <div class="col-md-12 text-center" id="tbl"></div>
-            <div class="col-md-12 text-center" id="s1"></div>
-        </div>
-        <br>
-        <!-- Dashboard -->
-        <div class="dropdown col-md-12 text-center">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="povoaDropdownParceiros()">
-            Selecione o parceiro
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="ddlParceiros"></div>
-        </div>
-        <div>
-            <canvas id="chart" style="max-width: 500px;"></canvas>
-        </div>
-        <script type="text/javascript" src="dashboard.js"></script>
-        <!-- /Dashboard -->
-    </div>
+
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
