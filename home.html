@@ -30,23 +30,23 @@
         </div>
     </div>
     <div class="form">
-        <div class="col-md-12">
-            <select id="select" name="select">
-                <div class="col-md-12 text-center" id="box"></div>
-            </select>
-            <button type="button" id="btn" class="btn btn-primary" onclick="seleciona()">Seleciona</button>
-        </div>
-
-        <div class="row">
-            <div class="col-12">
-                <h3 class="text-center"></h3>
-            </div>
-        </div>
-
         <div class="tabela">
             <div class="col-md-12 text-center" id="tbl"></div>
             <div class="col-md-12 text-center" id="s1"></div>
         </div>
+        <br>
+        <!-- Dashboard -->
+        <div class="dropdown col-md-12 text-center">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="povoaDropdownParceiros()">
+            Selecione o parceiro
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="ddlParceiros"></div>
+        </div>
+        <div>
+            <canvas id="chart" style="max-width: 500px;"></canvas>
+        </div>
+        <script type="text/javascript" src="dashboard.js"></script>
+        <!-- /Dashboard -->
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -58,6 +58,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 </body>
 
 </html>

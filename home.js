@@ -54,13 +54,6 @@ var templateBox = `<option value="**L1**">**L1**</option>
     <option value="L9">L9</option>
     <option value="L10">L10</option>`;
 
-function seleciona() {
-    var e = document.getElementById("select");
-    var sel = e.options[e.selectedIndex].text;
-    sessionStorage.setItem('selecaoag', sel);
-    window.location = "dashboard.html";
-}
-
 function logout() {
     localStorage.removeItem("userDash");
     window.location = "index.html";
