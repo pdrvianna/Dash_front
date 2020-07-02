@@ -54,54 +54,54 @@ var templateBox = `<option value="**L1**">**L1**</option>
     <option value="L9">L9</option>
     <option value="L10">L10</option>`;
 
-function seleciona(){
+function seleciona() {
     var e = document.getElementById("select");
     var sel = e.options[e.selectedIndex].text;
     sessionStorage.setItem('selecaoag', sel);
-    window.location="dashboard.html";
+    window.location = "dashboard.html";
 }
 
-function logout(){
+function logout() {
     localStorage.removeItem("userDash");
-    window.location="index.html";
+    window.location = "index.html";
 }
 
-function verificaUsuario(){
+function verificaUsuario() {
     // existe alguma info de "userDash" no armazenamento local?
     var userLogado = localStorage.getItem("userDash");
-    if (!userLogado){
+    if (!userLogado) {
         // se não tiver, redireciona pra o INDEX  (ou seja, não tá logado)
-        window.location="index.html";
+        window.location = "index.html";
     }
-    else{
+    else {
         // se tiver, mostra na barrinha
         var user = JSON.parse(userLogado);
         document.getElementById("barraUser").innerHTML = templateBarra
-                                                    .replace("**FOTO**",user.linkFoto)
-                                                    .replace("**NOME**", user.nome)
-                                                    .replace("**IDDEP**",user.depto.id)
-                                                    .replace("**DEPARTAMENTO**",user.depto.nome);
+            .replace("**FOTO**", user.linkFoto)
+            .replace("**NOME**", user.nome)
+            .replace("**IDDEP**", user.depto.id)
+            .replace("**DEPARTAMENTO**", user.depto.nome);
     }
     carregaAgentes();
 }
 
-function carregaAgentes() {   
+function carregaAgentes() {
     fetch("http://localhost:8080/agentesfinanceiros")
         .then(res => res.json())
         .then(res => preenchetbl(res))
 }
 
 function preenchetbl(resJson) {
-    
+
     console.log(resJson);
     var novalinha = templateTabela;
     var box = "<option value=vazio></option>";
     for (i = 0; i < resJson.length; i++) {
         var agente = resJson[i];
-        i=i+1;
-        var box = box + "<option value=L"+i+">"+agente.nome+"</option>";
-        var novalinha = novalinha.replace("Par"+i,agente.nome).replace("VolTrans"+i,+agente.volume); 
-        i=i-1;        
+        i = i + 1;
+        var box = box + "<option value=L" + i + ">" + agente.nome + "</option>";
+        var novalinha = novalinha.replace("Par" + i, agente.nome).replace("VolTrans" + i, +agente.volume);
+        i = i - 1;
     }
 
     document.getElementById("tbl").innerHTML = novalinha;
