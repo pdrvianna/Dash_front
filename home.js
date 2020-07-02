@@ -98,5 +98,4 @@ function preenchetbl(resJson) {
     }
 
     document.getElementById("tbl").innerHTML = novalinha;
-    document.getElementById("select").innerHTML = box;
 }
