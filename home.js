@@ -75,7 +75,6 @@ function verificaUsuario() {
             .replace("**IDDEP**", user.depto.id)
             .replace("**DEPARTAMENTO**", user.depto.nome);
     }
-    carregaAgentes();
 }
 
 function carregaAgentes() {
