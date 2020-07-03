@@ -40,6 +40,7 @@ function preencheChart({ statusOk, statusFalha, statusFraude, nome }) {
         chart = new Chart(ctxP, chartData);
     } else {
         chart.data.datasets[0].data = [statusOk, statusFalha, statusFraude];
+        chart.data.labels = [`Ok (${statusOk})`, `Falha (${statusFalha})`, `Fraude (${statusFraude})`];
         chart.update();
     }
 }
